@@ -1,0 +1,16 @@
+{
+    "name": "node-red-project",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "node-red-contrib-mongodb4": "~3.1.1",
+        "node-red-contrib-open": "~1.0.0",
+        "node-red-contrib-remote": "~2.0.2",
+        "node-red-contrib-uibuilder": "^7.2.0",
+        "node-red-dashboard": "~3.6.5",
+        "node-red-mongodb": "~0.0.18",
+        "react": "^19.1.0",
+        "vue": "^3.5.12"
+    }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "uib-blank",
+  "version": "6.1.0",
+  "private": true,
+  "description": "This is about the simplest template you can get for uibuilder.",
+  "browser": "./src/index.js",
+  "scripts": {
+    "build": "echo \"Error: no build process specified\" && exit 1"
+  },
+  "keywords": [
+    "uibuilder",
+    "node-red",
+    "node-red-contrib-uibuilder"
+  ],
+  "author": "Julian Knight (Totally Information)",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/TotallyInformation/node-red-contrib-uibuilder",
+  "bugs": "https://github.com/TotallyInformation/node-red-contrib-uibuilder/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TotallyInformation/node-red-contrib-uibuilder.git"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "maintained versions",
+    "last 2 versions",
+    "not dead",
+    "not ie > 0"
+  ],
+  "dependencies": {
+    "axios": "^1.9.0",
+    "bootstrap-icons": "^1.11.3",
+    "bootstrap-vue": "^2.23.1",
+    "chart.js": "^4.4.8",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "http-vue-loader": "^1.4.2",
+    "mongoose": "^8.13.2",
+    "paho-mqtt": "^1.1.0",
+    "papaparse": "^5.5.2",
+    "pinia": "^3.0.2",
+    "vue": "^3.5.12",
+    "vue-router": "^4.5.1",
+    "vuex": "^4.1.0"
+  }
+}

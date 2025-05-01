@@ -1,0 +1,1013 @@
+[
+    {
+        "id": "e90e4f047da94179",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "25129b78eedc7152",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e7d2b1fd6b096223",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "2d086e17c1043bce",
+        "type": "ui_group",
+        "name": "Smarth-garden",
+        "tab": "25129b78eedc7152",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c13e9f50c7de7761",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "my_mqtt_node_124",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d4cca1bb836ff04c",
+        "type": "mongodb",
+        "hostname": "mongodb+srv://nguyendinhchaukid:<db_password>@cluster0.nleja.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+        "port": 27017,
+        "db": "",
+        "name": ""
+    },
+    {
+        "id": "2ff3199b654ef328",
+        "type": "mongodb",
+        "hostname": "127.0.0.1",
+        "port": 27017,
+        "db": "smartgarden",
+        "name": ""
+    },
+    {
+        "id": "3f402a0132061849",
+        "type": "mongodb",
+        "hostname": "mongodb+srv://nguyendinhchaukid:qvSADhvHz9HAfmAb@cluster0.nleja.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0",
+        "port": 27017,
+        "db": "smartgarden",
+        "name": "Host"
+    },
+    {
+        "id": "b549350258d57e1d",
+        "type": "mongodb4-client",
+        "name": "",
+        "protocol": "mongodb",
+        "hostname": "",
+        "port": "",
+        "dbName": "smartgarden",
+        "appName": "",
+        "authSource": "",
+        "authMechanism": "DEFAULT",
+        "tls": false,
+        "tlsCAFile": "",
+        "tlsCertificateKeyFile": "",
+        "tlsInsecure": false,
+        "connectTimeoutMS": "30000",
+        "socketTimeoutMS": "0",
+        "minPoolSize": "0",
+        "maxPoolSize": "100",
+        "maxIdleTimeMS": "0",
+        "uri": "mongodb+srv://nguyendinhchaukid:qvSADhvHz9HAfmAb@cluster0.nleja.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0",
+        "advanced": "{}",
+        "uriTabActive": "tab-uri-advanced"
+    },
+    {
+        "id": "ece3044194b52847",
+        "type": "remote-config",
+        "name": "Node-RED UI",
+        "host": "localhost",
+        "protocol": "http",
+        "port": "1882",
+        "baseurl": "/ui",
+        "instancehash": "vit4m2mddih12wtsxhxcr4gpgbpnpfebx18z90ihppv6b7g4mnsdddeva1fepz3u",
+        "server": "nodered03.remote-red.com",
+        "region": "us"
+    },
+    {
+        "id": "9ad7922f12fab359",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.mqttdashboard.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ac5725a55eae0785",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "test.mosquitto.org",
+        "port": "1884",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "4ff029c9ce7ea817",
+        "type": "ui_gauge",
+        "z": "e90e4f047da94179",
+        "name": "",
+        "group": "2d086e17c1043bce",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Độ Ẩm Không Khí",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 570,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a10b3b3cda0f5bc6",
+        "type": "ui_gauge",
+        "z": "e90e4f047da94179",
+        "name": "",
+        "group": "2d086e17c1043bce",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Nhiệt độ không khí",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "-10",
+        "max": "60",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 570,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "9c56bac36259eb2f",
+        "type": "ui_gauge",
+        "z": "e90e4f047da94179",
+        "name": "",
+        "group": "2d086e17c1043bce",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Độ ẩm đất",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 550,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "07887f01c465582a",
+        "type": "ui_chart",
+        "z": "e90e4f047da94179",
+        "name": "",
+        "group": "2d086e17c1043bce",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "label": "Độ Ẩm Không Khí Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 590,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e1a366ffd3692b9c",
+        "type": "ui_chart",
+        "z": "e90e4f047da94179",
+        "name": "",
+        "group": "2d086e17c1043bce",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "Nhiệt Độ Không Khí Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 590,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee1eca88b9c2a5ae",
+        "type": "ui_chart",
+        "z": "e90e4f047da94179",
+        "name": "",
+        "group": "2d086e17c1043bce",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Độ Ẩm Đất Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 570,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7af6bde77a5953d3",
+        "type": "ui_button",
+        "z": "e90e4f047da94179",
+        "name": "",
+        "group": "2d086e17c1043bce",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Nhiệt Độ Logs",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 960,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fa2e733ba422b7b3",
+        "type": "ui_button",
+        "z": "e90e4f047da94179",
+        "name": "",
+        "group": "2d086e17c1043bce",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Độ Ẩm Đất Logs",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 960,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee38a72355660990",
+        "type": "ui_switch",
+        "z": "e90e4f047da94179",
+        "name": "",
+        "label": "LED",
+        "tooltip": "",
+        "group": "2d086e17c1043bce",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 530,
+        "y": 560,
+        "wires": [
+            [
+                "2ed35c7810304b3e"
+            ]
+        ]
+    },
+    {
+        "id": "7c3b568f039e3cb9",
+        "type": "ui_slider",
+        "z": "e90e4f047da94179",
+        "name": "",
+        "label": "Servo",
+        "tooltip": "",
+        "group": "2d086e17c1043bce",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "180",
+        "step": 1,
+        "className": "",
+        "x": 530,
+        "y": 620,
+        "wires": [
+            [
+                "a0308ffa83405f49"
+            ]
+        ]
+    },
+    {
+        "id": "7fdf3104fdf1dab8",
+        "type": "ui_colour_picker",
+        "z": "e90e4f047da94179",
+        "name": "",
+        "label": "NeoPixel Color Picker",
+        "group": "2d086e17c1043bce",
+        "format": "rgb",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 320,
+        "y": 680,
+        "wires": [
+            [
+                "0cb3d84308a93a70"
+            ]
+        ]
+    },
+    {
+        "id": "547360ee19e4401e",
+        "type": "ui_button",
+        "z": "e90e4f047da94179",
+        "name": "",
+        "group": "2d086e17c1043bce",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Độ Ẩm Không Khí Logs",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 990,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c0274f687acd6b6e",
+        "type": "mqtt in",
+        "z": "e90e4f047da94179",
+        "name": "",
+        "topic": "Tempdata",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c13e9f50c7de7761",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 80,
+        "y": 260,
+        "wires": [
+            [
+                "7852aa6d999a5c0b",
+                "ab09ecf934e9abc0",
+                "b539c6886732500d",
+                "3dbb535e52c2a08b",
+                "1914bb8a448ae761"
+            ]
+        ]
+    },
+    {
+        "id": "2ed35c7810304b3e",
+        "type": "mqtt out",
+        "z": "e90e4f047da94179",
+        "name": "",
+        "topic": "lights",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c13e9f50c7de7761",
+        "x": 810,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "a0308ffa83405f49",
+        "type": "mqtt out",
+        "z": "e90e4f047da94179",
+        "name": "",
+        "topic": "servo",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c13e9f50c7de7761",
+        "x": 810,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "efafd205fa8e8420",
+        "type": "mqtt out",
+        "z": "e90e4f047da94179",
+        "name": "",
+        "topic": "lights/neopixel",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c13e9f50c7de7761",
+        "x": 840,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "0cb3d84308a93a70",
+        "type": "function",
+        "z": "e90e4f047da94179",
+        "name": "Parse RGB values",
+        "func": "msg.payload = msg.payload.replace(\"rgb(\", \"\").replace(\")\", \"\");\nreturn msg;\n\n// rbg(r,g,b) and r,g,b",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 680,
+        "wires": [
+            [
+                "efafd205fa8e8420"
+            ]
+        ]
+    },
+    {
+        "id": "ab09ecf934e9abc0",
+        "type": "function",
+        "z": "e90e4f047da94179",
+        "name": "Extract temperature",
+        "func": "// Đầu vào: chuỗi \"temp,hum,soil\"\nvar input = msg.payload;\n\n// Xử lý chuỗi\ninput = input.trim();\nvar values = input.split(',');\nvalues = values.map(function (value) {\n    return parseFloat(value.trim());\n});\n\n// Bắt lỗi nếu dữ liệu không hợp lệ\nif (values.length < 3 || isNaN(values[0])) {\n    node.error(\"Invalid input data: \" + input, msg);\n    return null;\n}\n\n// Lấy nhiệt độ (giá trị đầu tiên)\nmsg.payload = values[0]; // 0 là nhiệt độ\n\n// Bạn có thể gán thêm nhãn để tiện debug\nmsg.topic = \"current_temperature\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 320,
+        "wires": [
+            [
+                "a10b3b3cda0f5bc6",
+                "e1a366ffd3692b9c"
+            ]
+        ]
+    },
+    {
+        "id": "b539c6886732500d",
+        "type": "function",
+        "z": "e90e4f047da94179",
+        "name": "Extract humidity",
+        "func": "var input = msg.payload; // Assuming the input is in msg.payload\n\n// Remove any leading or trailing whitespace\ninput = input.trim();\n\n// Split the input string using commas as the delimiter\nvar values = input.split(',');\n\n// Remove leading and trailing whitespace from each value and convert to float\nvalues = values.map(function (value) {\n    return parseFloat(value.trim());\n});\n\nmsg.payload = values[2]; // Set the output payload to the array of float values\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 440,
+        "wires": [
+            [
+                "9c56bac36259eb2f",
+                "ee1eca88b9c2a5ae"
+            ]
+        ]
+    },
+    {
+        "id": "7852aa6d999a5c0b",
+        "type": "function",
+        "z": "e90e4f047da94179",
+        "name": "Extract Soil Moisture",
+        "func": "var input = msg.payload; // Assuming the input is in msg.payload\n\n// Remove any leading or trailing whitespace\ninput = input.trim();\n\n// Split the input string using commas as the delimiter\nvar values = input.split(',');\n\n// Remove leading and trailing whitespace from each value and convert to float\nvalues = values.map(function (value) {\n    return parseFloat(value.trim());\n});\n\nmsg.payload = values[0]; // Set the output payload to the array of float values\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 220,
+        "wires": [
+            [
+                "4ff029c9ce7ea817",
+                "07887f01c465582a"
+            ]
+        ]
+    },
+    {
+        "id": "0fc8182e8301b076",
+        "type": "file",
+        "z": "e90e4f047da94179",
+        "name": "",
+        "filename": "D:\\Main_Pj\\Node-red\\Data\\datasetNode.csv",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 770,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3dbb535e52c2a08b",
+        "type": "function",
+        "z": "e90e4f047da94179",
+        "name": "Add timestamp",
+        "func": "var now = new Date();\n\nvar options = {\n    timeZone: 'Asia/Ho_Chi_Minh',\n    hour12: false,\n    year: 'numeric',\n    month: '2-digit',\n    day: '2-digit',\n    hour: '2-digit',\n    minute: '2-digit',\n    second: '2-digit'\n};\n\nvar timestampVN = new Intl.DateTimeFormat('vi-VN', options).format(now);\n\n\nvar value = msg.payload;\nvar parts = value.split(',');\n\nmsg.payload = {\n    timestamp: timestampVN,\n    temperature: parseFloat(parts[0]),\n    humidity: parseFloat(parts[1]),\n    soilMoisture: parseInt(parts[2])\n};\n\nmsg.operation = \"insertOne\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b159e47df4d482f",
+        "type": "mongodb4",
+        "z": "e90e4f047da94179",
+        "clientNode": "b549350258d57e1d",
+        "mode": "collection",
+        "collection": "datagarden",
+        "operation": "",
+        "output": "toArray",
+        "maxTimeMS": "0",
+        "handleDocId": false,
+        "name": "",
+        "x": 670,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9f55968677fa82b",
+        "type": "http in",
+        "z": "e90e4f047da94179",
+        "name": "",
+        "url": "/dataset",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 780,
+        "wires": [
+            [
+                "f08b41a99482833d"
+            ]
+        ]
+    },
+    {
+        "id": "08be1037083b1f91",
+        "type": "http response",
+        "z": "e90e4f047da94179",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 690,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "8fe6cd753ed48936",
+        "type": "mongodb4",
+        "z": "e90e4f047da94179",
+        "clientNode": "b549350258d57e1d",
+        "mode": "collection",
+        "collection": "datagarden",
+        "operation": "",
+        "output": "toArray",
+        "maxTimeMS": "0",
+        "handleDocId": false,
+        "name": "",
+        "x": 510,
+        "y": 780,
+        "wires": [
+            [
+                "08be1037083b1f91"
+            ]
+        ]
+    },
+    {
+        "id": "f08b41a99482833d",
+        "type": "function",
+        "z": "e90e4f047da94179",
+        "name": "find-data",
+        "func": "msg.operation = \"find\";\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 780,
+        "wires": [
+            [
+                "8fe6cd753ed48936"
+            ]
+        ]
+    },
+    {
+        "id": "1d14c5aaa0bfc4dd",
+        "type": "remote-access",
+        "z": "e90e4f047da94179",
+        "confignode": "ece3044194b52847",
+        "name": "",
+        "verbose": 0,
+        "x": 100,
+        "y": 620,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2d2cea3e087b9697",
+        "type": "uibuilder",
+        "z": "e90e4f047da94179",
+        "name": "",
+        "topic": "",
+        "url": "Dashboard",
+        "okToGo": true,
+        "fwdInMessages": false,
+        "allowScripts": false,
+        "allowStyles": false,
+        "copyIndex": true,
+        "templateFolder": "blank",
+        "extTemplate": "",
+        "showfolder": false,
+        "reload": false,
+        "sourceFolder": "src",
+        "deployedVersion": "7.2.0",
+        "showMsgUib": false,
+        "title": "",
+        "descr": "",
+        "editurl": "vscode://fileD:\\Main_Pj\\Node-red\\uibuilder/Dashboard/?windowId=_blank",
+        "x": 100,
+        "y": 540,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1914bb8a448ae761",
+        "type": "function",
+        "z": "e90e4f047da94179",
+        "name": "Add timestamp CSV",
+        "func": "var value = msg.payload;\n\nvar now = new Date();\n\nvar dateVN = now.toLocaleDateString('vi-VN', {\n    timeZone: 'Asia/Ho_Chi_Minh'\n});\n\nvar timeVN = now.toLocaleTimeString('vi-VN', {\n    timeZone: 'Asia/Ho_Chi_Minh',\n    hour12: false,\n    hour: '2-digit',\n    minute: '2-digit'\n});\n\n// Ghép lại theo yêu cầu: ngày giờ, dữ liệu\nmsg.payload = `${dateVN} ${timeVN}, ${value}`;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 140,
+        "wires": [
+            [
+                "0fc8182e8301b076"
+            ]
+        ]
+    }
+]
