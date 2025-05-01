@@ -539,7 +539,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 960,
+        "x": 1160,
         "y": 440,
         "wires": [
             []
@@ -801,7 +801,8 @@
         "wires": [
             [
                 "9c56bac36259eb2f",
-                "ee1eca88b9c2a5ae"
+                "ee1eca88b9c2a5ae",
+                "243c197c45ab9381"
             ]
         ]
     },
@@ -831,13 +832,13 @@
         "type": "file",
         "z": "e90e4f047da94179",
         "name": "",
-        "filename": "D:\\Main_Pj\\Node-red\\Data\\datasetNode.csv",
+        "filename": "D:\\Main_Pj\\Node-red\\uibuilder\\Dashboard\\src\\data.csv",
         "filenameType": "str",
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 770,
+        "x": 800,
         "y": 120,
         "wires": [
             []
@@ -962,6 +963,26 @@
         ]
     },
     {
+        "id": "1914bb8a448ae761",
+        "type": "function",
+        "z": "e90e4f047da94179",
+        "name": "Add timestamp CSV",
+        "func": "var value = msg.payload;\n\nvar now = new Date();\n\nvar dateVN = now.toLocaleDateString('vi-VN', {\n    timeZone: 'Asia/Ho_Chi_Minh'\n});\n\nvar timeVN = now.toLocaleTimeString('vi-VN', {\n    timeZone: 'Asia/Ho_Chi_Minh',\n    hour12: false,\n    hour: '2-digit',\n    minute: '2-digit'\n});\n\n// Ghép lại theo yêu cầu: ngày giờ, dữ liệu\nmsg.payload = `${dateVN} ${timeVN}, ${value}`;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 140,
+        "wires": [
+            [
+                "0fc8182e8301b076"
+            ]
+        ]
+    },
+    {
         "id": "2d2cea3e087b9697",
         "type": "uibuilder",
         "z": "e90e4f047da94179",
@@ -991,22 +1012,41 @@
         ]
     },
     {
-        "id": "1914bb8a448ae761",
+        "id": "bdc6941b5641dbda",
+        "type": "ui_toast",
+        "z": "e90e4f047da94179",
+        "position": "top right",
+        "displayTime": "5",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Thông báo độ ẩm",
+        "x": 870,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "243c197c45ab9381",
         "type": "function",
         "z": "e90e4f047da94179",
-        "name": "Add timestamp CSV",
-        "func": "var value = msg.payload;\n\nvar now = new Date();\n\nvar dateVN = now.toLocaleDateString('vi-VN', {\n    timeZone: 'Asia/Ho_Chi_Minh'\n});\n\nvar timeVN = now.toLocaleTimeString('vi-VN', {\n    timeZone: 'Asia/Ho_Chi_Minh',\n    hour12: false,\n    hour: '2-digit',\n    minute: '2-digit'\n});\n\n// Ghép lại theo yêu cầu: ngày giờ, dữ liệu\nmsg.payload = `${dateVN} ${timeVN}, ${value}`;\n\nreturn msg;\n",
+        "name": "Notify humidity",
+        "func": "var soilMoisture = msg.payload;\n\nif (soilMoisture < 30) {\n    msg.payload = \"⚠️ Độ ẩm đất thấp (\" + soilMoisture + \"%) → Đã bật máy bơm!\";\n    return msg;\n}\n\nreturn null;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 340,
-        "y": 140,
+        "x": 660,
+        "y": 440,
         "wires": [
             [
-                "0fc8182e8301b076"
+                "bdc6941b5641dbda"
             ]
         ]
     }

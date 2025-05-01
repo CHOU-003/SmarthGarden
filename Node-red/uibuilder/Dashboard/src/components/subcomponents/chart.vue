@@ -17,7 +17,7 @@ module.exports = {
   methods: {
     async createChart() {
       // Giả sử bạn đã load dữ liệu CSV thành JSON
-      const data = await fetch('./datasetNode.csv')
+      const data = await fetch('./data.csv')
         .then(response => response.text())
         .then(text => this.parseCSV(text));
 
